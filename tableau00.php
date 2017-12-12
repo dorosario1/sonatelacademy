@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (isset ($_SESSION['login0'])=='user')
-{
+if (isset ($_SESSION['login'])) {
+if ($_SESSION['login'] == "admin"){
 
 
 ?>
@@ -64,10 +64,10 @@ if (isset ($_SESSION['login0'])=='user')
     }
     }
 
-    else{
+    else {
         echo "desolé votre profil ne vous permet pas d'acceder a ce contenue";
     }
-
+    }
     ?>
     </div>
     </body>

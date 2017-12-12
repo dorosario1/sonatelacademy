@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+if (isset ($_SESSION['login'])) {
+if ($_SESSION['login'] == "admin"){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,10 +41,16 @@ function moyenne($tab)
 }
 
 $b = moyenne($Tableau);
-echo "La moyenne des ages est $b <br>";
+echo "La moyenne des ages est" . $b . "<br/>";
 
+}
+else {
+    echo "desolé votre profil ne vous permet pas d'acceder a ce contenue";
+}
 
+}
 ?>
 
 </body>
+
 </html>

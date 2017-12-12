@@ -1,6 +1,8 @@
 <?php
-if (isset ($_SESSION['login'])=='admin') {
-    ?>
+session_start();
+if (isset ($_SESSION['login'])) {
+    if ($_SESSION['login']=="user"){
+?>
 
     <?php
     if (isset($_POST['submit'])) {
@@ -54,7 +56,7 @@ if (isset ($_SESSION['login'])=='admin') {
     
         <?php
 } else {
-    echo "desolé votre profil ne vous permet pas d'acceder a ce contenue";
-
+        echo "desolé votre profil ne vous permet pas d'acceder a ce contenue";
+    }
 }
 ?>
